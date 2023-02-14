@@ -30,6 +30,11 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return Inertia::render('Dashboard');
+        // return Inertia::render('Dashboard');
+        return view ('dashboard');
     })->name('dashboard');
 });
+
+// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function(){
+//     return view ('dashboard');
+// })->name('dashboard');
